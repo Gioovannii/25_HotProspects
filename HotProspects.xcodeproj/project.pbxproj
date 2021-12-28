@@ -11,6 +11,8 @@
 		7B9BFF1F2775638E00EA9731 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BFF1E2775638E00EA9731 /* ContentView.swift */; };
 		7B9BFF212775638F00EA9731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9BFF202775638F00EA9731 /* Assets.xcassets */; };
 		7B9BFF242775638F00EA9731 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9BFF232775638F00EA9731 /* Preview Assets.xcassets */; };
+		7BB27379277AA1BF00ED738F /* EnvironmentObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB27378277AA1BF00ED738F /* EnvironmentObjectView.swift */; };
+		7BB2737C277AA45600ED738F /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2737B277AA45600ED738F /* TabItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		7B9BFF1E2775638E00EA9731 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B9BFF202775638F00EA9731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B9BFF232775638F00EA9731 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7BB27378277AA1BF00ED738F /* EnvironmentObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectView.swift; sourceTree = "<group>"; };
+		7BB2737B277AA45600ED738F /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				7B9BFF1C2775638E00EA9731 /* HotProspectsApp.swift */,
-				7B9BFF1E2775638E00EA9731 /* ContentView.swift */,
+				7BB27377277AA1AE00ED738F /* Lecons */,
+				7BB2737A277AA1DC00ED738F /* Views */,
 				7B9BFF202775638F00EA9731 /* Assets.xcassets */,
 				7B9BFF222775638F00EA9731 /* Preview Content */,
 			);
@@ -65,6 +70,23 @@
 				7B9BFF232775638F00EA9731 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7BB27377277AA1AE00ED738F /* Lecons */ = {
+			isa = PBXGroup;
+			children = (
+				7BB27378277AA1BF00ED738F /* EnvironmentObjectView.swift */,
+				7BB2737B277AA45600ED738F /* TabItemView.swift */,
+			);
+			path = Lecons;
+			sourceTree = "<group>";
+		};
+		7BB2737A277AA1DC00ED738F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B9BFF1E2775638E00EA9731 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			files = (
 				7B9BFF1F2775638E00EA9731 /* ContentView.swift in Sources */,
 				7B9BFF1D2775638E00EA9731 /* HotProspectsApp.swift in Sources */,
+				7BB2737C277AA45600ED738F /* TabItemView.swift in Sources */,
+				7BB27379277AA1BF00ED738F /* EnvironmentObjectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
