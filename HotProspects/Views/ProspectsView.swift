@@ -52,7 +52,7 @@ struct ProspectsView: View {
                     }
                     .contextMenu {
                         Button(prospect.isContacted ? "Mark Uncontacted" : "Mark Contacted") {
-                            prospect.isContacted.toggle()
+                            prospects.toggle(prospect)
                         }
                     }
                 }
