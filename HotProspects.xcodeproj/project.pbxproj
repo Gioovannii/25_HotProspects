@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B97709B277C35F6005DD088 /* PublishingObservableChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97709A277C35F5005DD088 /* PublishingObservableChanges.swift */; };
+		7B97709D277C3DFD005DD088 /* ImageInterpolationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97709C277C3DFD005DD088 /* ImageInterpolationView.swift */; };
 		7B9BFF1D2775638E00EA9731 /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BFF1C2775638E00EA9731 /* HotProspectsApp.swift */; };
 		7B9BFF1F2775638E00EA9731 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BFF1E2775638E00EA9731 /* ContentView.swift */; };
 		7B9BFF212775638F00EA9731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9BFF202775638F00EA9731 /* Assets.xcassets */; };
 		7B9BFF242775638F00EA9731 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B9BFF232775638F00EA9731 /* Preview Assets.xcassets */; };
 		7BB27379277AA1BF00ED738F /* EnvironmentObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB27378277AA1BF00ED738F /* EnvironmentObjectView.swift */; };
 		7BB2737C277AA45600ED738F /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2737B277AA45600ED738F /* TabItemView.swift */; };
+		7BB99DBA277D445D00DA02A5 /* ContextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB99DB9277D445D00DA02A5 /* ContextMenuView.swift */; };
+		7BB99DBC277D45EC00DA02A5 /* NotifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB99DBB277D45EC00DA02A5 /* NotifView.swift */; };
+		7BB99DBF277D4BD600DA02A5 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BB99DBE277D4BD600DA02A5 /* SamplePackage */; };
+		7BB99DC1277D4C0F00DA02A5 /* SPMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB99DC0277D4C0F00DA02A5 /* SPMView.swift */; };
+		7BB99DC3277D4D5200DA02A5 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB99DC2277D4D5200DA02A5 /* ProspectsView.swift */; };
+		7BB99DC5277D4D5D00DA02A5 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB99DC4277D4D5D00DA02A5 /* MeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B97709A277C35F5005DD088 /* PublishingObservableChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishingObservableChanges.swift; sourceTree = "<group>"; };
+		7B97709C277C3DFD005DD088 /* ImageInterpolationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInterpolationView.swift; sourceTree = "<group>"; };
 		7B9BFF192775638E00EA9731 /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B9BFF1C2775638E00EA9731 /* HotProspectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectsApp.swift; sourceTree = "<group>"; };
 		7B9BFF1E2775638E00EA9731 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +33,11 @@
 		7B9BFF232775638F00EA9731 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BB27378277AA1BF00ED738F /* EnvironmentObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectView.swift; sourceTree = "<group>"; };
 		7BB2737B277AA45600ED738F /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		7BB99DB9277D445D00DA02A5 /* ContextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuView.swift; sourceTree = "<group>"; };
+		7BB99DBB277D45EC00DA02A5 /* NotifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifView.swift; sourceTree = "<group>"; };
+		7BB99DC0277D4C0F00DA02A5 /* SPMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMView.swift; sourceTree = "<group>"; };
+		7BB99DC2277D4D5200DA02A5 /* ProspectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectsView.swift; sourceTree = "<group>"; };
+		7BB99DC4277D4D5D00DA02A5 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB99DBF277D4BD600DA02A5 /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +93,11 @@
 			children = (
 				7BB27378277AA1BF00ED738F /* EnvironmentObjectView.swift */,
 				7BB2737B277AA45600ED738F /* TabItemView.swift */,
+				7B97709A277C35F5005DD088 /* PublishingObservableChanges.swift */,
+				7B97709C277C3DFD005DD088 /* ImageInterpolationView.swift */,
+				7BB99DB9277D445D00DA02A5 /* ContextMenuView.swift */,
+				7BB99DBB277D45EC00DA02A5 /* NotifView.swift */,
+				7BB99DC0277D4C0F00DA02A5 /* SPMView.swift */,
 			);
 			path = Lecons;
 			sourceTree = "<group>";
@@ -85,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				7B9BFF1E2775638E00EA9731 /* ContentView.swift */,
+				7BB99DC2277D4D5200DA02A5 /* ProspectsView.swift */,
+				7BB99DC4277D4D5D00DA02A5 /* MeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +128,9 @@
 			dependencies = (
 			);
 			name = HotProspects;
+			packageProductDependencies = (
+				7BB99DBE277D4BD600DA02A5 /* SamplePackage */,
+			);
 			productName = HotProspects;
 			productReference = 7B9BFF192775638E00EA9731 /* HotProspects.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +159,9 @@
 				Base,
 			);
 			mainGroup = 7B9BFF102775638E00EA9731;
+			packageReferences = (
+				7BB99DBD277D4BD600DA02A5 /* XCRemoteSwiftPackageReference "SamplePackage" */,
+			);
 			productRefGroup = 7B9BFF1A2775638E00EA9731 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,10 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B97709B277C35F6005DD088 /* PublishingObservableChanges.swift in Sources */,
 				7B9BFF1F2775638E00EA9731 /* ContentView.swift in Sources */,
+				7BB99DC3277D4D5200DA02A5 /* ProspectsView.swift in Sources */,
 				7B9BFF1D2775638E00EA9731 /* HotProspectsApp.swift in Sources */,
+				7B97709D277C3DFD005DD088 /* ImageInterpolationView.swift in Sources */,
 				7BB2737C277AA45600ED738F /* TabItemView.swift in Sources */,
+				7BB99DC1277D4C0F00DA02A5 /* SPMView.swift in Sources */,
+				7BB99DBC277D45EC00DA02A5 /* NotifView.swift in Sources */,
 				7BB27379277AA1BF00ED738F /* EnvironmentObjectView.swift in Sources */,
+				7BB99DC5277D4D5D00DA02A5 /* MeView.swift in Sources */,
+				7BB99DBA277D445D00DA02A5 /* ContextMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BB99DBD277D4BD600DA02A5 /* XCRemoteSwiftPackageReference "SamplePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/SamplePackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BB99DBE277D4BD600DA02A5 /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BB99DBD277D4BD600DA02A5 /* XCRemoteSwiftPackageReference "SamplePackage" */;
+			productName = SamplePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B9BFF112775638E00EA9731 /* Project object */;
 }
