@@ -12,6 +12,9 @@ struct ProspectsView: View {
         case none, contacted, uncontacted
     }
     
+    @EnvironmentObject var prospects: Prospects
+    let filter: FilterType
+    
     var title: String {
         switch filter {
         case .none:
@@ -23,14 +26,12 @@ struct ProspectsView: View {
         }
     }
     
-    let filter: FilterType
     
     var body: some View {
         NavigationView {
             Text("Hello world !")
                 .navigationTitle(title)
         }
-        
     }
 }
 
