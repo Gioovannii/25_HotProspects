@@ -11,7 +11,7 @@ import SwiftUI
 struct MeView: View {
     @State private var name = "Anonymous"
     @State private var emailAdresss = "you@yoursite.com"
-    
+
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
     
@@ -29,7 +29,7 @@ struct MeView: View {
                     .padding([.horizontal, .bottom])
                 
                 
-                Image(uiImage: generateQRCode(from: qrCode))
+                Image(uiImage: generateQRCode(from: "\(name)\n\(emailAdresss)"))
                     .interpolation(.none)
                     .resizable()
                     .scaledToFit()
