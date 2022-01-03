@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class DelayedUpdater: ObservableObject {
+@MainActor class DelayedUpdater: ObservableObject {
     var value = 0 {
         willSet {
             objectWillChange.send()
@@ -24,16 +24,10 @@ class DelayedUpdater: ObservableObject {
 }
 
 struct PublishingObservableView: View {
-    @ObservedObject var updater = DelayedUpdater()
+    @StateObject var updater = DelayedUpdater()
 
     var body: some View {
         Text("Value is: \(updater.value)")
 
-    }
-}
-
-struct ResultTypeView_Previews: PreviewProvider {
-    static var previews: some View {
-        PublishingObservableView()
     }
 }
