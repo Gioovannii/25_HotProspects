@@ -15,6 +15,7 @@ struct ImageInterpolationView: View {
             .scaledToFit()
             .frame(maxHeight: .infinity)
             .background(Color.black)
+            .ignoresSafeArea()
     }
 }
 
