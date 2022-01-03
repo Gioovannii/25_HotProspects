@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TabItemView: View {
-    @State private var selectedTab = 0
+    @State private var selectedTab = "One"
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             Text("Tab 1")
@@ -16,8 +17,7 @@ struct TabItemView: View {
                     selectedTab = 1
                 }
                 .tabItem {
-                    Image(systemName: "star")
-                    Text("One")
+                    Label("One", systemImage: "star")
                 }
             
             Text("Tab 2")
@@ -25,7 +25,7 @@ struct TabItemView: View {
                     Image(systemName: "star.fill")
                     Text("Two")
                 }
-                .tag(1)
+                .tag("Two")
 
         }
     }
