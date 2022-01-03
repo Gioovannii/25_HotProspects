@@ -14,7 +14,7 @@ struct TabItemView: View {
         TabView(selection: $selectedTab) {
             Text("Tab 1")
                 .onTapGesture {
-                    selectedTab = 1
+                    selectedTab = "Two"
                 }
                 .tabItem {
                     Label("One", systemImage: "star")
