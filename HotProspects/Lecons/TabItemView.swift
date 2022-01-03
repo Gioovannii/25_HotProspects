@@ -22,8 +22,7 @@ struct TabItemView: View {
             
             Text("Tab 2")
                 .tabItem {
-                    Image(systemName: "star.fill")
-                    Text("Two")
+                    Label("Two", systemImage: "circle")
                 }
                 .tag("Two")
 
