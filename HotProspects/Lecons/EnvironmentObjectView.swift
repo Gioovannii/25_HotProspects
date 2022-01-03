@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class User: ObservableObject {
+@MainActor class User: ObservableObject {
     @Published var name = "Taylor Swift"
 }
 
@@ -29,7 +29,7 @@ struct DisplayView: View {
 
 
 struct EnvironmentObjectView: View {
-    let user = User()
+    @StateObject private var user = User()
     
     var body: some View {
         VStack {
