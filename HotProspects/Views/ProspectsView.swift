@@ -15,7 +15,7 @@ struct ProspectsView: View {
     }
     
     @EnvironmentObject var prospects: Prospects
-    @State private var  isShowingScanner = false
+    @State private var isShowingScanner = false
     
     let filter: FilterType
     
@@ -50,10 +50,13 @@ struct ProspectsView: View {
                             .font(.headline)
                         Text(prospect.emailAdress)
                             .foregroundColor(.secondary)
+                        
+                        Image(systemName: prospect.isContacted ? "checkmark.shield.fill" : "xmark.shield")
+                            .font(.largeTitle)
                     }
                     .contextMenu {
                         Button(prospect.isContacted ? "Mark Uncontacted" : "Mark Contacted") {
-                            prospects.toggle(prospect)
+                            self.prospects.toggle(prospect)
                         }
                         
                         if !prospect.isContacted {
@@ -66,16 +69,14 @@ struct ProspectsView: View {
             }
             
             .navigationTitle(title)
-            .toolbar {
-                Button {
-                    isShowingScanner = true
-                } label: {
-                    Image(systemName: "qrcode.viewfinder")
-                    Text("Scan")
-                }
-            }
+            .navigationBarItems(trailing: Button(action: {
+                self.isShowingScanner = true
+            }) {
+                Image(systemName: "qrcode.viewfinder")
+                Text("Scan")
+            })
             .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], completion: handleScan)
+                CodeScannerView(codeTypes: [.qr], simulatedData: "GiovanniGaffé\ngaffejonathan@ymail.com", completion: self.handleScan)
             }
         }
     }
@@ -93,7 +94,8 @@ struct ProspectsView: View {
             person.name = details[0]
             person.emailAdress = details[1]
             
-            prospects.add(person)
+//            self.prospects.people.append(person)
+            self.prospects.add(person)
             
         case .failure(let error):
             print("Scanning failed \(error.localizedDescription)")
@@ -109,10 +111,9 @@ struct ProspectsView: View {
             content.subtitle = prospect.emailAdress
             content.sound = UNNotificationSound.default
             
-            
-//            var dateComponents = DateComponents()
-//            dateComponents.hour = 9
-//            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            //            var dateComponents = DateComponents()
+            //            dateComponents.hour = 9
+            //            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
             
@@ -139,5 +140,6 @@ struct ProspectsView: View {
 struct ProspectsView_Previews: PreviewProvider {
     static var previews: some View {
         ProspectsView(filter: .none)
+            .environmentObject(Prospects())
     }
 }
