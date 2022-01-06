@@ -54,15 +54,30 @@ struct ProspectsView: View {
                         Image(systemName: prospect.isContacted ? "checkmark.shield.fill" : "xmark.shield")
                             .font(.largeTitle)
                     }
-                    .contextMenu {
-                        Button(prospect.isContacted ? "Mark Uncontacted" : "Mark Contacted") {
-                            self.prospects.toggle(prospect)
+                    .swipeActions {
+                        if prospect.isContacted {
+                            Button {
+                                prospects.toggle(prospect)
+                            } label: {
+                                Label("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark")
+                            }
+                            .tint(.blue)
+                        } else {
+                            Button {
+                                prospects.toggle(prospect)
+                            } label: {
+                                Label("Mark Contacted", systemImage: "person.crop.circle.badge.checkmark")
+                            }
+                            .tint(.green)
                         }
                         
                         if !prospect.isContacted {
-                            Button("Remind me") {
+                            Button {
                                 addnotification(for: prospect)
+                            } label: {
+                                Label("Remind Me", systemImage: "bell")
                             }
+                            .tint(.orange)
                         }
                     }
                 }
@@ -85,17 +100,16 @@ struct ProspectsView: View {
         isShowingScanner = false
         
         switch result {
-        case .success(let code):
+        case .success(let result):
             
-            let details = code.string.components(separatedBy: "\n")
+            let details = result.string.components(separatedBy: "\n")
             guard details.count == 2 else { return }
             
             let person = Prospect()
             person.name = details[0]
             person.emailAdress = details[1]
             
-//            self.prospects.people.append(person)
-            self.prospects.add(person)
+            prospects.add(person)
             
         case .failure(let error):
             print("Scanning failed \(error.localizedDescription)")
@@ -111,8 +125,8 @@ struct ProspectsView: View {
             content.subtitle = prospect.emailAdress
             content.sound = UNNotificationSound.default
             
-            //            var dateComponents = DateComponents()
-            //            dateComponents.hour = 9
+            var dateComponents = DateComponents()
+            dateComponents.hour = 9
             //            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
             
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
@@ -129,7 +143,7 @@ struct ProspectsView: View {
                     if success {
                         addRequest()
                     } else {
-                        print("doh")
+                        print("D'oh")
                     }
                 }
             }
