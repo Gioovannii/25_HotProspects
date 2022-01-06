@@ -21,23 +21,22 @@ class Prospects: ObservableObject {
         
         if let data = UserDefaults.standard.data(forKey: Self.saveKey) {
             if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
-                self.people = decoded
+                people = decoded
                 return
             }
         }
-        self.people = []
-    }
-    
-    
-    func add(_ prospect: Prospect) {
-        people.append(prospect)
-        save()
+        people = []
     }
     
     private func save() {
         if let encoded = try? JSONEncoder().encode(people) {
             UserDefaults.standard.set(encoded, forKey: Self.saveKey)
         }
+    }
+    
+    func add(_ prospect: Prospect) {
+        people.append(prospect)
+        save()
     }
     
     func toggle(_ prospect: Prospect) {
